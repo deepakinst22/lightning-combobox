@@ -3,8 +3,8 @@ public class ComboController {
     @AuraEnabled
     public static Map<String,String> getContactList(){
 
-			Map<string,string> contactOptions= new Map<string,string>();
-      List<Contact> contList = [Select Id, Name From User Contact Limit 10];
+	  Map<string,string> contactOptions= new Map<string,string>();
+      List<Contact> contList = [Select Id, Name From Contact Limit 10];
            
       contactOptions.put('','-Select One-');
       for(Contact contStr : contList) {
@@ -14,3 +14,4 @@ public class ComboController {
       return contactOptions;
        
     }
+}
