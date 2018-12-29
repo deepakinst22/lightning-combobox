@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="ComboController">
+  <lightning:card footer="Combobx Demo" title="Combobx Demo">
+        <aura:set attribute="actions">
+            <lightning:button variant="brand"  label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <lightning:layout multipleRows="true" verticalAlign="center">    
+            
+            <lightning:layoutItem smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" size="12" padding="around-small">
+                <lightning:combobox name="Contacts" 
+                                    label="Contacts" 
+                                    value="All Contacts" 
+                                    placeholder="All Contacts" 
+                                    options="{! v.options }" 
+                                    onchange="{! c.handleChange }"/>
+            </lightning:layoutItem>           
+            </lightning:layout>
+        </p>
+    </lightning:card>
+</aura:component>
