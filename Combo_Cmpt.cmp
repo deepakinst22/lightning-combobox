@@ -15,7 +15,7 @@
                 <lightning:combobox name="Contacts" 
                                     label="Contacts" 
                                     value="All Contacts" 
-                                    placeholder="All Contacts" 
+                                    placeholder="-Select Contacts-" 
                                     options="{! v.options }" 
                                     onchange="{! c.handleChange }"/>
             </lightning:layoutItem>           
